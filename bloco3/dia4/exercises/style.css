@@ -73,3 +73,10 @@ table{
     padding: 5px;
 
 }
+.links{
+    text-decoration: none;
+   
+}
+#side_bar{
+    display:inline-block;
+}
