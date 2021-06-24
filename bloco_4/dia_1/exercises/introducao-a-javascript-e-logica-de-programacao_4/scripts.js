@@ -98,5 +98,42 @@ if (custoProduto<0 || valorVenda<0){
 } else{
     console.log(lucro*1000);
 }
-/11
+//11
 let salarioBruto=1500.10;
+
+//
+let pizzas = ['4 queijos', 'frango com catupiry', 'chocolate', 'marguerita', 'palmito'];
+for(let index = 0; index<pizzas.length; index +=1 ){
+    console.log(pizzas[index]);
+}
+
+//
+let tasksList = ['Tomar café', 'Reunião', 'Brincar com o cachorro'];
+
+let indexOfTask = tasksList.indexOf('Reuniao');
+
+
+console.log(indexOfTask);
+// 3
+
+let menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
+let indexOfPortfolio = menu.indexOf('Portfólio') ;
+
+
+console.log(indexOfPortfolio);
+
+let menuu = ['Home', 'Serviços', 'Portfólio', 'Links'];
+menuu.push('Contato');
+console.log(menuu);
+
+let groceryList = ['Arroz', 'Feijão', 'Alface', 'Melancia'];
+
+for( let index = 0; index< groceryList.length; index +=1){
+    console.log(groceryList[index]);
+}
+
+let names =['João', 'Maria', 'Antonio','Margarida'];
+
+for(let nome of names){
+    console.log(nome);
+}
