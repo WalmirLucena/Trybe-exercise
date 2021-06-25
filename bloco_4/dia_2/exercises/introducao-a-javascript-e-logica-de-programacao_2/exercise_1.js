@@ -61,6 +61,21 @@ console.log(menor + " é o menor número");
 let numeros=[];
 for( let index=1; index<= 25; index+=1){
     numeros[index-1] = index;
+    console.log(numeros[index-1]/2);
+
 
 }
-console.log(numeros);
+
+
+
+ let value = 0;
+ for (let index = 0; index < numbers.length; index += 1) {
+     if(index+1>=numbers.length){
+         numbers[index]= numbers[index]*2;
+     }else{
+    value= numbers[index+1]*numbers[index];
+    numbers[index] = value;
+     }
+
+}
+console.log(numbers);
