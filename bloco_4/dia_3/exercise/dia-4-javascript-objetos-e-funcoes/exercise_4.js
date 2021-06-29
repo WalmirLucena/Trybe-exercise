@@ -83,7 +83,9 @@ console.log(menorValor(array2));
 
 //4 
 function verificaTamanho(array){
-    let maior=0;
+    let contRepetido = 0;
+    let contNumero =0;
+    let indexNumeroRepetido==
    
     for(key in array){
         
@@ -97,3 +99,19 @@ function verificaTamanho(array){
 let nomes= ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
 
 console.log(verificaTamanho(nomes));
+
+//5
+
+function maisRepete(array){
+    let cont=0;
+   
+    for(let key in array){
+        for(let index in array){
+            if(array[key]===array[index]){
+                cont +=1;
+            })
+        }
+       
+       
+    }
+} 
