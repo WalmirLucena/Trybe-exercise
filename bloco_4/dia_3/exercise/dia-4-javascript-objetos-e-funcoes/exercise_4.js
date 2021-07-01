@@ -35,10 +35,83 @@ for (let value in info){
 }
 // funções
 
+//1
 function palindromo(word){
     let cont =0;
     for(let indice in word){
-        if(word[])
-    } ; 
-}
+        if(word[indice]!= word[(word.length-1) - indice]){
+            return false;
+        }
+        
+        }
+        return true;
+
+    } 
+
 console.log(palindromo('arara'));
+
+//2
+function maiorValor(array){
+    let maior = 0;
+    for(let key in array){
+        if(array[maior]< array[key]){
+            maior= key; 
+        } 
+    
+
+}
+return maior;
+}
+let arrayTeste = [2,3,6,7,10,1];
+
+console.log(maiorValor(arrayTeste));
+
+//3 
+function menorValor(array){
+    let menor =0;
+    for(let index in array){
+        if(array[menor]> array[index]){
+            menor = index;
+
+        }
+}
+return menor;
+}
+let array2 =  [2, 4, 6, 7, 10, 0, -3]; 
+
+console.log(menorValor(array2));
+
+//4 
+function verificaTamanho(array){
+    let contRepetido = 0;
+    let contNumero =0;
+    let indexNumeroRepetido==
+   
+    for(key in array){
+        
+        if((array[maior]).length < (array[key]).length){
+            maior = key;
+        }
+    }
+    return array[maior];
+}
+
+let nomes= ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
+
+console.log(verificaTamanho(nomes));
+
+//5
+
+function maisRepete(array){
+    let cont=0;
+   
+    for(let key in array){
+        for(let index in array){
+            if(array[key]===array[index]){
+                cont +=1;
+            })
+        }
+       
+       
+    }
+} 
