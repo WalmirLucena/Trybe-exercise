@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // COLOQUE SEU CÓDIGO AQUI
+      //1
+      let texto = document.createElement("h1");
+
+      texto.innerText = "Exercício 5.2 - JavaScript DOM";
+      document.body.appendChild(texto);
+      //2
+      let box1 = document.createElement("div");
+      box1.className = "main-content";
+      document.body.appendChild(box1);
+      //3
+      let box2 = document.createElement("div");
+      box2.className = "center-content";
+      box1.appendChild(box2);
+      //4
+      let paragraph = document.createElement("p");
+      paragraph.innerText = "Trabalhando com Elementos usando JavaScript";
+      box2.appendChild(paragraph);
+      //5
+      let leftBox = document.createElement("div");
+      leftBox.className = "left-content";
+      box1.appendChild(leftBox);
+      //6
+      let rightBox = document.createElement("div");
+      rightBox.className = "right-content";
+      box1.appendChild(rightBox);
+      //<img class="" src="">
+      //7 
+      let image = document.createElement("img");
+      image.className = "small-image";
+      image.src = "https://picsum.photos/200";
+      leftBox.appendChild(image);
+      //8
+      let lista = document.createElement("ul");
+      rightBox.appendChild(lista);
+      let valores = ["um", "dois", "tres", "quatro", "cinco", "seis","sete", "oito", "nove","dez"];
+      for( let index = 0; index< valores.length; index +=1){
+        
+          let elementosLi = document.createElement("li");
+          elementosLi.innerText = valores[index];
+          lista.appendChild(elementosLi);
+      }
+      //9 
+      for(let index=0; index< 3; index+=1){
+        let tagH3 = document.createElement("h3");
+        tagH3.innerText = index;
+        box1.appendChild(tagH3);
+      }
+      //parte 2
+      //1
+      let h1 = document.querySelector("h1")
+      texto.className = "title";
+      //2
+      let h3 = document.getElementsByTagName("h3");
+      for(let index=0; index<3; index +=1){
+        h3[index].className = "description";
+        
+      }
+      console.log(h3);
+
+      //3
+      let removeDiv = document.getElementsByClassName("left-content")[0];
+
+      box1.removeChild(removeDiv);
+      console.log(box1);
+      //4
+      let centraliza = document.getElementsByClassName("right-content")[0];
+      centraliza.style.marginRight ="auto";
+      //5
+      let trocaCor = document.getElementsByClassName("center-content")[0];
+      trocaCor.parentNode.style.backgroundColor = "green";
+      //6
+    lista.lastChild.remove();
+    lista.lastChild.remove();
+
+    
+
+
+    </script>
+  </body>
+</html>
