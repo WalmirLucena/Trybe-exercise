@@ -93,12 +93,44 @@
       let lista = document.createElement("ul");
       rightBox.appendChild(lista);
       let valores = ["um", "dois", "tres", "quatro", "cinco", "seis","sete", "oito", "nove","dez"];
-      for( let value in valores){
+      for( let index = 0; index< valores.length; index +=1){
+        
           let elementosLi = document.createElement("li");
-          elementosLi = valores[value];
-          
+          elementosLi.innerText = valores[index];
+          lista.appendChild(elementosLi);
       }
-      lista.appendChild(elementosLi);
+      //9 
+      for(let index=0; index< 3; index+=1){
+        let tagH3 = document.createElement("h3");
+        tagH3.innerText = index;
+        box1.appendChild(tagH3);
+      }
+      //parte 2
+      //1
+      let h1 = document.querySelector("h1")
+      texto.className = "title";
+      //2
+      let h3 = document.getElementsByTagName("h3");
+      for(let index=0; index<3; index +=1){
+        h3[index].className = "description";
+        
+      }
+      console.log(h3);
+
+      //3
+      let removeDiv = document.getElementsByClassName("left-content")[0];
+
+      box1.removeChild(removeDiv);
+      console.log(box1);
+      //4
+      let centraliza = document.getElementsByClassName("right-content")[0];
+      centraliza.style.marginRight ="auto";
+      //5
+      let trocaCor = document.getElementsByClassName("center-content")[0];
+      trocaCor.parentNode.style.backgroundColor = "green";
+      //6
+    lista.lastChild.remove();
+    lista.lastChild.remove();
 
     
 
