@@ -1,3 +1,13 @@
+// window.onload = boasVindas;
+
+// function boasVindas(){
+//   document.getElementById('boasVindas').innerHTML = prompt('Digite seu Nome: ');
+
+// }
+const botao = document.getElementById("btn-friday");
+
+botao.addEventListener("click", mudaBotao);
+
 const btnHoliday = document.getElementById('btn-holiday');
 btnHoliday.addEventListener('click', function() {
   const holidays = document.querySelectorAll('.holiday');
@@ -69,4 +79,14 @@ function alteraCor(elementos, cor){
 
 function mudaBotao(){
     document.getElementById('btn-friday').classlist.add('mudaCor');
+}
+
+const botaoAtividades = document.getElementById('btn-atividades')
+botaoAtividades.addEventListener('click',incluirAtividades);
+
+function incluirAtividades(){
+  const inputAtividade = document.getElementById('inputAtividade');
+  const paragrafo = document.getElementById('atividades');
+
+  paragrafo.innerText += inputAtividade.value;
 }
