@@ -89,5 +89,8 @@ function incluirAtividades(){
   const paragrafo = document.getElementById('atividades');
 
   paragrafo.innerText += inputAtividade.value;
+
+
   inputAtividade.value = '';
+
 }
