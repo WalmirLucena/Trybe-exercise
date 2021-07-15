@@ -1,0 +1,68 @@
+*{
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.3;
+}* 
+
+
+
+.speaker-form, .speaker-form-header {
+  background-color: rgb(246, 247, 248);
+  border: 1px solid rgb(214, 217, 220);
+  border-radius: 3px;
+  width: 80%;
+  margin: 20px auto;
+  margin: 15px auto;
+  padding: 30px;
+}
+
+.speaker-form-header h1{
+  font-size: 40px;
+}
+
+
+.speaker-form-header h1, .speaker-form-header p{
+  text-align: center;
+  color: rgb(128, 128, 128);
+  text-shadow: 0.05em 0.05em rgb(0, 221, 255);
+
+}
+.line-content{
+    margin: 20px;
+    border: none;
+}
+.form-row{
+  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+.form-row input[type="text"], input[type=email], select, textarea {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(214, 217, 220);
+  border-radius: 3px;
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+  margin:5px 0;
+
+}
+body {
+  color:red;
+  border-color: red;
+}
+.legacy-form-row{
+    margin:20px;
+    padding: 10px;
+}
+.textarea-label{
+    vertical-align: top;
+}
+[type=email]:focus:valid{
+    color:blue;
+    border-color: green;
+}
+
+[type=email]:focus:invalid{
+    color:red;
+    border-color: red;
+}

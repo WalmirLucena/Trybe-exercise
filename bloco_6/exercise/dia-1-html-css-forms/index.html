@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="main">
+        <form action="" method="get">
+        <fieldset id="box1">
+            <label id="nome">Nome</label>
+            <input type="text" id="nome" name="nome"  maxlength="40" required >
+            
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email"  maxlenght="50" required>
+            <br>
+            <label for="cpf">CPF</label>
+            <input type="number" id="cpf" maxlenght="11" required>
+            <br>
+            <label for="endereco">Endereço</label>
+            <input type="text" id="endereco" id="endereco" maxlength="200" required></input>
+            <label for="cidade">Cidade</label>
+            <input type="text" maxlength="28" id="cidade" name="cidade" required>
+            <br>
+            <label for="estado">Estado</label>
+            <select name="estado" id="estado" required>
+            </select>
+            <label for="tipo">Tipo:</label>
+            <input type="radio" id="tipo" value="casa" required>Casa
+            <input type="radio" id="tipo" value="apartamento" required>Apartamento
+        </fieldset>
+        <fieldset id="box2">
+            <label for="resumo">Resumo</label>
+            <br>
+            <textarea name="resumo" id="resumo" cols="30" rows="10" maxlength="1000" required></textarea>
+            <label for="cargo">Cargo</label>
+            <input type="text" name="cargo" id="cargo" maxlength="40" required>
+            <br>
+            <label for="descricaoCargo">Descrição do Cargo</label>
+            <input type="text" name="descricaoCargo" id="descricaoCargo" maxlength="500" required>
+            <label for="data">Data de Início</label>
+            <input type="date" name="data" id="data" required>
+        </fieldset>
+        <button type="submit" id="enviar">Enviar</button>
+        <button type="reset">Limpar</button>
+        <div id="print"></div>
+    </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
