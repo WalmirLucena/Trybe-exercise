@@ -2,6 +2,7 @@ let state = ['Acre', 'Alagoas', 'Amapá', 'Amazonas', 'Bahia',  'Ceará', 'Distr
 const getState = document.getElementById('estado');
 const getButton = document.getElementById('enviar');
 
+
 function stateOnSelect(){
     for(let index=0;index<state.length; index+=1){
         let option = document.createElement('option');
@@ -14,7 +15,7 @@ function handleSubmit(event){
     event.preventDefault();
 
     //Validar os dados
-let name = document.querySelector('[name=nome]');
+let name = document.querySelector('[name=name]');
 //Verifica Max Lenght e REquire
 if(name.value.length > 40 || name.value.length ===0 ){
     alert("Nome Inválido!");
@@ -22,9 +23,154 @@ if(name.value.length > 40 || name.value.length ===0 ){
 
 }
 
-
-window.onload = function(){
-    stateOnSelect();
-
 getButton.addEventListener('click',handleSubmit)
+
+new JustValidate('.form', {
+    Rules: {
+      email: {
+          required: true,
+          email: true,
+          maxLength: 50
+
+      },
+      name: {
+          required: true,
+          maxLength: 40
+      },
+      cpf:{
+        required: true,
+        maxLength: 11
+      },
+      endereco:{
+        required: true,
+        maxLength: 200
+      },
+      cidade:{
+        required: true,
+        maxLength: 28
+      },
+      estado:{
+          required: true,
+          
+      },
+      radio:{
+          required: true,
+          
+      },
+      text: {
+          required: true,
+          maxLength: 1000
+      },
+      position: {
+        required: true,
+        maxLength: 40
+      }
+      ,
+      description: {
+        required: true,
+        maxLength: 500
+      },
+      date:{
+        required: true,
+
+      },
+        messages: {
+          email: {
+            required: 'O campo de email é obrigatório.',
+            email: 'O email digitado não é válido',
+            maxLength: 'O limite é de 50 caracteres.'
+  
+        },
+        name: {
+            required: 'O campo de nome é obrigatório.',
+            maxLength: 'O limite é de 40 caracteres.'
+        },
+        cpf:{
+          required: 'O campo de CPF é obrigatório.',
+          maxLength: 'O limite é de 11 caracteres.'
+        },
+        },
+        endereco:{
+          required: 'O campo de Endereço é obrigatório.',
+          maxLength: 'O limite é de 200 caracteres.'
+        },
+        cidade:{
+          required: 'O campo de Cidade é obrigatório.',
+          maxLength: 'O limite é de 28 caracteres.'
+        },
+        estado:{
+            required: 'O campo de Estado é obrigatório.',
+            
+        },
+        radio:{
+            required: 'O campo de Radio é obrigatório.',
+            
+        },
+        text: {
+            required: 'O campo de Resumo é obrigatório.',
+            maxLength: 'O limite é de 1000 caracteres.'
+        },
+        position: {
+          required: 'O campo de Cargo é obrigatório.',
+          maxLength: 'O limite é de 40 caracteres.'
+        }
+        ,
+        description: {
+          required: 'O campo de Descrição de Cargo é obrigatório.',
+          maxLength: 'O limite é de 500 caracteres.'
+        },
+        date:{
+          required: 'O campo de Data é obrigatório.',
+        }
+        },
+        submitHandler: function (form, values) {
+            console.log(form, values);
+          }
+  }
+);
+new window.JustValidate('.form', {
+    Messages: {
+      required: 'O campo é necessário',
+      email: 'Digite um email válido',
+      maxLength: 'The field must contain a maximum of :value characters',
+      minLength: 'The field must contain a minimum of :value characters',
+      password: 'Password is not valid',
+      remote: 'Email already exists'
+    },
+});
+const clearButton = document.querySelector('#clear-button');
+function clearFields() {
+  const formElements = document.querySelectorAll('input');
+  const textArea = document.querySelector('textarea')
+  for (let index = 0; index < formElements.length; index += 1) {
+    const userInput = formElements[index];
+    userInput.value = '';
+    textArea.value = '';
+  }
+}
+
+clearButton.addEventListener('click', clearFields);
+
+const picker = new Pikaday({
+    field: document.getElementById('datepicker'),
+    format: 'D/M/YYYY',
+    toString(date, format) {
+      // you should do formatting based on the passed format,
+      // but we will just return 'D/M/YYYY' for simplicity
+      const day = date.getDate();
+      const month = date.getMonth() + 1;
+      const year = date.getFullYear();
+      return `${day}/${month}/${year}`;
+    },
+    parse(dateString, format) {
+      // dateString is the result of `toString` method
+      const parts = dateString.split('/');
+      const day = parseInt(parts[0], 10);
+      const month = parseInt(parts[1], 10) - 1;
+      const year = parseInt(parts[2], 10);
+      return new Date(year, month, day);
+    }
+  });
+  window.onload = function(){
+    stateOnSelect();
 }

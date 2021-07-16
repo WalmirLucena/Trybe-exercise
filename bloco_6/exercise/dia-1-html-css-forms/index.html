@@ -1,54 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 </head>
+
 <body>
-    <main id="main">
-        <form action="" method="get">
-        <fieldset id="box1">
-            <label id="nome">Nome</label>
-            <input type="text" id="nome" name="nome"  maxlength="40" required >
-            
-            <label for="email">Email</label>
-            <input type="text" id="email" name="email"  maxlenght="50" required>
-            <br>
-            <label for="cpf">CPF</label>
-            <input type="number" id="cpf" maxlenght="11" required>
-            <br>
-            <label for="endereco">Endereço</label>
-            <input type="text" id="endereco" id="endereco" maxlength="200" required></input>
-            <label for="cidade">Cidade</label>
-            <input type="text" maxlength="28" id="cidade" name="cidade" required>
-            <br>
-            <label for="estado">Estado</label>
-            <select name="estado" id="estado" required>
-            </select>
-            <label for="tipo">Tipo:</label>
-            <input type="radio" id="tipo" value="casa" required>Casa
-            <input type="radio" id="tipo" value="apartamento" required>Apartamento
-        </fieldset>
-        <fieldset id="box2">
-            <label for="resumo">Resumo</label>
-            <br>
-            <textarea name="resumo" id="resumo" cols="30" rows="10" maxlength="1000" required></textarea>
-            <label for="cargo">Cargo</label>
-            <input type="text" name="cargo" id="cargo" maxlength="40" required>
-            <br>
-            <label for="descricaoCargo">Descrição do Cargo</label>
-            <input type="text" name="descricaoCargo" id="descricaoCargo" maxlength="500" required>
-            <label for="data">Data de Início</label>
-            <input type="date" name="data" id="data" required>
-        </fieldset>
-        <button type="submit" id="enviar">Enviar</button>
-        <button type="reset">Limpar</button>
-        <div id="print"></div>
-    </form>
+    <main id="main" class="form-header mx-5">
+        <h1 class="display-3">Preencha nosso Formulário</h1>
+        <form action="" method="get" class="form">
+            <fieldset id="box1">
+                <div class="mb-3">
+                    <label class="form-label" id="name">Nome</label>
+
+                    <input type="text" id="name" name="name" class="form-control" maxlength="40"
+                        data-validate-field="name" required>
+                </div>
+                <div class="my-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="email" name="email" maxlenght="50"
+                        data-validate-field="email" required>
+                </div>
+                <div class="my-3">
+                    <label for="cpf" class="form-label">CPF</label>
+                    <input type="number" class="form-control" id="cpf" maxlenght="11" data-validate-field="cpf"
+                        required>
+                </div>
+                <div class="my-3">
+                    <label for="endereco" class="form-label">Endereço</label>
+                    <input type="text" data-validate-field="endereco" id="endereco" maxlength="200" class="form-control"
+                        required></input>
+                </div>
+                <div class="my-3">
+                    <label for="cidade" class="form-label">Cidade</label>
+                    <input type="text" maxlength="28" id="cidade" data-validate-field="cidade" class="form-control"
+                        name="cidade" required>
+                </div>
+                <div class="my-3">
+                    <label for="estado" class="form-label">Estado</label>
+                    <select name="estado" id="estado" data-validate-field="estado" class="form-select" required>
+                    </select>
+                </div>
+                <div class="my-3 form-check">
+                    <label for="tipo" class="form-label">Tipo:</label>
+                    <input type="radio" id="tipo" value="casa" data-validate-field="radio" class="form-check-label mx-2"
+                        required>Casa
+                    <input type="radio" id="tipo" value="apartamento" data-validate-field="radio"
+                        class="form-check-label mx-2" required>Apartamento
+                </div>
+            </fieldset>
+            <fieldset id="box2">
+                <div class="my-3">
+                    <label for="resumo" class="form-label">Resumo</label>
+                    <br>
+                    <textarea name="resumo" id="resumo" cols="30" rows="3" maxlength="1000" data-validate-field="text"
+                        class="form-control" required></textarea>
+                </div>
+                <div class="my-3">
+                    <label for="cargo" class="form-label">Cargo</label>
+                    <input type="text" name="cargo" id="cargo" maxlength="40" data-validate-field="position"
+                        class="form-control" required>
+                </div>
+                <div class="my-3">
+                    <label for="descricaoCargo" class="form-label">Descrição do Cargo </label>
+                    <input type="text" name="descricaoCargo" id="descricaoCargo" data-validate-field="description"
+                        maxlength="500" class="form-control" required>
+                </div>
+                <div class="my-3">
+                    <label for="date" class="form-label">Data de Início</label>
+                    <input type="text" name="data" id="date" data-validate-field="date" class="form-control" placeholder="DD/MM/AAAA" id="datepicker" required>
+                </div>
+            </fieldset>
+            <button class="btn btn-secondary submit-button" type="submit" id="enviar">Enviar</button>
+            <button class="btn btn-secondary" type="reset" id="clear-button" >Limpar</button>
+            <div id="print"></div>
+        </form>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <script src="Just-validate/dist/js/just-validate.min.js"></script>
     <script src="script.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+       
+
+    
 </body>
+
 </html>
