@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dist/css/DatePickerX.min.css">
+<script src="Just-validate/dist/js/DatePickerX.min.js"></script>
+
 </head>
 <body>
     <header class="speaker-form-header">
@@ -14,10 +17,10 @@
         <form action="" method="get" class="speaker-form">
             <fieldset class="legacy-form-row">
                 <legend>Dados pessoais</legend>
-                <label for="full-name">Nome</label>
-                <input type="text" id="full-name" name="full-name">
+                <label for="full-name" >Nome</label>
+                <input type="text" id="full-name" name="full-name" data-validate-field="name" required>
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email"> 
+                <input type="email" name="email" id="email" required> 
             </fieldset>
             <fieldset class="legacy-form-row">
                 <legend>Tipo de Palestra</legend>
@@ -44,7 +47,7 @@
                 <label for="resumo">Resumo</label>
                 <textarea name="resumo" id="resumo" cols="30" rows="10"></textarea>
             </fieldset>
-            <fieldset class="line-content>
+            <fieldset class="line-content">
                 <label for="disponibilidade"><input type="checkbox" id="disponibilidade">
                 <span>Tenho disponibilidade de participar do evento nessa data!</span></label>
 
