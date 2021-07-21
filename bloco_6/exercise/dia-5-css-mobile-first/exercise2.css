@@ -1,0 +1,96 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  header{
+      background-color: blue;
+      color: white;
+  }
+  @media only screen and (max-width: 600px) {
+    body {
+      background-color: rgb(218, 220, 221);
+    }
+    header{
+        width: 100%;
+        background-color: blue;
+        color: white;
+        font-size: 2em;
+        display: flex;
+        justify-content: center;
+        height: 100px;
+
+    }
+    header ul{
+        display: none;
+    }
+aside, article{
+    font-size: 1.5em;
+    padding: 15px 35px;
+    }
+footer{
+    background-color: blue;
+    color: white;
+    font-size: 1.4em;
+    padding: 15px 35px;
+}
+  }
+@media only screen and (max-width: 1024px) {
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    font-size: 2em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+    align-items: center;
+    text-align: center;
+}
+header nav{
+    display: flex;
+    flex-direction: row;
+} 
+aside, article, h1 {
+    font-size: 1.5em;
+    padding: 10px 35px;
+}
+footer{
+    background-color: blue;
+    font-size: 1.3em;
+    color: white;
+    padding: 10px 35px;
+}
+
+
+}
+@media only screen and (min-width: 1025px) {
+header{
+    padding: 0 15px;
+    width: 100%;
+    font-size: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav ul{
+    display: flex;
+    list-style: none;   
+}
+header nav ul li{
+    padding: 0 25px;
+}
+aside, article{
+    font-size: 1.5em;
+    padding: 10px 45px;
+}
+footer{
+        background-color: blue;
+        color: white;
+        font-size: 1.5em;
+        padding: 15px 35px;
+}
+}
