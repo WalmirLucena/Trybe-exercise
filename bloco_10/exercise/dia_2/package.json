@@ -1,0 +1,16 @@
+{
+  "name": "dia_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ex1.js",
+  "dependencies": {
+    "jest": "^27.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
